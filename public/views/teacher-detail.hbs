@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SDB</title>
+  	<link rel="stylesheet" href="/css/nav.css">
+  	<link rel="stylesheet" href="/css/detail.css">
+  
+</head>
+<body>
+	{{>nav}}
+<div class="main">
+	<div class="content">
+		<div class="main-content">
+			<div class="img-div">
+				<img src="/img/{{data.status}}/{{data.img}}" class="img">
+			</div>
+
+			<div class="detail">
+			<p><b>ID NO: </b><span class="text">{{data._id}}</span></p><hr>
+
+			<p><b>NAME: </b><span class="text">{{data.name}}</span></p><hr>
+
+			<p><b>FATHER'S NAME: </b><span class="text">{{data.f_name}}</span></p><hr>
+
+			<p><b>STATUS: </b><span class="text">{{data.status}}</span></p><hr>
+
+			<p><b>PHONE NO: </b><span class="text">{{data.phone_no}}</span></p><hr>
+
+			<p><b>EMAIL ADDRES: </b><span class="text">{{data.email}}</span></p><hr>
+
+			<p><b>ADDRESS: </b><span class="text">{{data.address}}</span></p><hr>
+
+			<p><b>QUALIFICATION: </b><span class="text">{{data.qualification}}</span></p><hr>
+
+			<p><b>SALARY: </b><span class="text">{{data.salary}}</span></p><hr>
+
+			<p><b>ADMISSION DATA: </b><span class="text">{{data.date}}</span></p><hr>
+		</div>
+		</div>
+
+		<div class="fees">
+			<div class="main_fees">
+			<p class="fees_heading">FEES DETAILS 2021</p>
+			{{#each data.years}}
+			<p class="fees_p" id="fees">{{this}}: <span class="span">PAID</span></p>
+			{{/each}}
+		</div>
+	</div>
+	</div>
+	
+		<div class="btn_div">
+			<a href="/fees/{{data.status}}/{{data._id}}" class="btn">$</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="search_div_parent">
+	<div class="search_div">
+		<form method="get" action="/search">
+
+			<input type="text" placeholder="NAME or ROLL NO" name="find" class="search">
+
+			<select name="choose" class="choose">
+				<option selected="selected" value="name">NAME</option>
+				<option value="roll">ROLL</option>
+			</select>
+
+			<select name="status" class="choose">
+				<option selected="selected" value="{{status}}">{{status}}</option>
+			</select>
+
+			<input type="submit" value="search" class="search_btn">
+		</form>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+.choose{
+	margin-top: 5%;
+}
+.img>img{
+	border: 1px solid black;
+	width: 200px;
+	height: 150px;
+	margin: 10% 22%;
+}
+.input{
+	border: 1px solid black;
+	height: auto;
+}
+.main-content{
+	height: 500px;
+}

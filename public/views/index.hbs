@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SDB</title>
+  	<link rel="stylesheet" href="/css/nav.css">
+  	<link rel="stylesheet" href="/css/find.css">
+  	<link rel="stylesheet" href="/css/search.css">
+  	<link rel="stylesheet" href="/all.css">
+
+</head>
+<body>
+<div class="main">
+	{{>nav}}
+	{{>search}}
+	<div class="main">
+		<div class="content">
+			<div class="main-content">
+			<ul class="ul">
+				{{#each data}}
+				<li><div class="a">
+					<a href="/find/student/id/{{this._id}}"><b class="text">{{this.name}}</b></a></div>
+
+					<div class="p">
+					<p><sub>{{this.id}}</sub></p></div>
+
+				</li><hr>
+				{{/each}}
+			</ul>
+		</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

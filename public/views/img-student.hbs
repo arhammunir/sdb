@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SDB</title>
+  	<link rel="stylesheet" href="/css/nav.css">
+  	<link rel="stylesheet" href="/css/main-admission.css">
+  	<link rel="stylesheet" href="/css/img.css">
+</head>
+<body>
+<div class="main">
+
+	{{>nav}}
+
+	<div class="content">
+		<div class="main-content">
+			<div class="img">
+				<img src="../img/a.jpg" class="img" id="img">
+			</div>
+		<div class="choose">
+
+			<form method="post" action="/img/student/id/{{id}}" enctype="multipart/form-data">
+
+				<input type="file" class="input" id="file" name="file"><br>
+
+				<input type="submit" value="CLICK" class="btn">
+
+			</form>
+
+		</div>
+		</div>
+		
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="/js/img.js"></script>
+</html>

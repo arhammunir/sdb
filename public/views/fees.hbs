@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SDB</title>
+  	<link rel="stylesheet" href="/css/nav.css">
+  	<link rel="stylesheet" href="/css/fees.css">
+  
+</head>
+<body>
+	{{>nav}}
+	<div class="main">
+		<div class="content">
+			<div class="main_content">
+				<div class="cont">
+				<form action="/pay/{{data.status}}/{{data._id}}" method="post" >
+					JAN: <input type="checkbox" value="jan" name="month" class="input"><br>
+					FEB: <input type="checkbox" value="feb" name="month" class="input"><br>
+					MAR: <input type="checkbox" value="mar" name="month" class="input"><br>
+					APR: <input type="checkbox" value="apr" name="month" class="input"><br>
+					MAY: <input type="checkbox" value="may" name="month" class="input"><br>
+					JUN: <input type="checkbox" value="jun" name="month" class="input"><br>
+					JUL: <input type="checkbox" value="jul" name="month" class="input"><br>
+					SEP: <input type="checkbox" value="sep" name="month" class="input"><br>
+					OCT: <input type="checkbox" value="oct" name="month" class="input"><br>
+					NOV: <input type="checkbox" value="nov" name="month" class="input"><br>
+					DES: <input type="checkbox" value="des" name="month" class="input"><br>
+					<input type="submit" value="PAY" class="btn">
+				</form>
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

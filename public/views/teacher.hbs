@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SDB</title>
+  	<link rel="stylesheet" href="/css/nav.css">
+  	<link rel="stylesheet" href="/css/main-admission.css">
+</head>
+<body>
+<div class="main">
+	{{>nav}}
+
+	<div class="content">
+		<div class="main-content">
+		<form method="post" action="/add-teacher">
+			<input type="text" placeholder="id..." name="id" class="input"><br>
+
+			<input type="text" placeholder="name..." name="name" required="required" class="input"><br>
+
+			<input type="text" placeholder="father's name..." name="fname" required="required" class="input"><br>
+		
+			<label for="male">
+		 MALE: <input type="radio" name="gender" id="male" value="male" required="required" ></label>
+
+
+			<label for="female">
+		 FEMALE: <input type="radio" name="gender" id="female" value="female" required="required" ></label>
+
+		 	<input type="text" placeholder="SUBJECT: eng, urdu..." name="sub" required="required" class="input"><br>
+
+
+			<input type="email" placeholder="123@gmail.com..." name="email" required="required" class="input"><br>
+
+			<input type="tel" placeholder="03******" name="phone" required="required" class="input"><br>
+
+			<input type="text" placeholder="Orangi town, Karachi..." name="address" required="required" class="input"><br>
+
+			<input type="text" placeholder="salary res." name="salary" required="required" class="input"><br>
+
+			<input type="text" placeholder="X-qualification" name="qualification" required="required" class="input"><br>
+
+			<input type="submit" value="ADD" class="btn">
+		</form>
+	</div>
+	</div>
+</div>
+</body>
+</html>

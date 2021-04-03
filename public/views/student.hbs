@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SDB</title>
+  	<link rel="stylesheet" href="/css/nav.css">
+  	<link rel="stylesheet" href="/css/main-admission.css">
+</head>
+<body>
+<div class="main">
+
+	{{>nav}}
+
+	<div class="content">
+		<div class="main-content">
+		<form method="post" action="/add-student">
+			<input type="text" placeholder="ROLL NO: 1, 2, 3" name="roll" class="input" required="required"><br>
+
+			<input type="text" placeholder="NAME: arham..." name="name" class="input"required="required"><br>
+
+			<input type="text" placeholder="FATHER'S NAME: Md..." name="fname" class="input"required="required"><br>
+
+			<input type="text" placeholder="CLASS NAME: IX, X, XI, XII" name="class" class="input" list="class"required="required"><br>
+
+			<datalist id="class">
+				<option value="IX">IX</option>
+				<option value="X">X</option>
+				<option value="XI">XI</option>
+				<option value="XII">XII</option>
+			</datalist>
+
+			<label for="male">
+		 MALE: <input type="radio" name="gender" id="male" value="male" required="required"></label>
+
+
+			<label for="female">
+		 FEMALE: <input type="radio" name="gender" id="female" value="female" required="required"></label>
+
+
+			<input type="email" placeholder="EMAIL: 123@gmail.com..." name="email" class="input" required="required"><br>
+
+			<input type="tel" placeholder="PHONE NO: 03******" name="phone" class="input" required="required"><br>
+
+			<input type="text" placeholder="ADDRESS: Orangi town, Karachi..." name="address" class="input" required="required"><br>
+
+			<input type="text" placeholder="FEES: 1000Rs." name="fees" class="input" required="required"><br>
+
+			<input type="text" placeholder="BADGE: boys sec # 1" name="badge" class="input" required="required"><br>
+
+			<input type="submit" value="ADD" class="btn">
+		</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
