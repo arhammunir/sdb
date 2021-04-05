@@ -153,7 +153,7 @@ app.get("/find/:v/id/:id", (req, res)=>{
 
 
 var Storage1= multer.diskStorage({
-	destination: function(req, file, cb){cb(null, "./public/img/student/")},
+	destination: function(req, file, cb){cb(null, "./public/img/student")},
 	filename: (req, file, cb)=>{cb(null, req.params.id+path.extname(file.originalname));}
 	
 })
@@ -177,7 +177,7 @@ app.post("/img/student/id/:id",upload1, (req, res)=>{
 	};
 	add();
 	res.redirect("/");
-})
+});
 
 
 
