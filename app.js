@@ -176,7 +176,7 @@ app.post("/img/student/id/:id",upload1, (req, res)=>{
 			)
 	};
 	add();
-	res.end();
+	res.render("index");
 });
 
 
