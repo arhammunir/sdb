@@ -48,9 +48,11 @@ app.get("/add/:v", (req, res)=>{
 })
 
 app.post("/add-student", (req, res)=>{
+	var data_insert;
+	var data;
 	var insert_student_data= async function(){
 		try{
-			var data_insert= new student({
+			data_insert= new student({
 			_id: req.body.roll,
 			name: req.body.name,
 			f_name: req.body.fname,
@@ -62,21 +64,24 @@ app.post("/add-student", (req, res)=>{
 			fees: req.body.fees,
 			badge: req.body.badge
 			});
-			var data = await data_insert.save();
-			res.render("img-student", {id: data._id})
+			data = await data_insert.save();
+			//
 		}
 		catch{
 			(e)=>{console.log("STUDENT DATABASE ERROR IS "+ e) }
 		}
 	};
 	insert_student_data();
+	res.render("img-student", {id: data_insert._id})
 });
 
 
 app.post("/add-teacher", (req, res)=>{
 	console.log(req.body);
+	var data_teacher;
+	var data_insert_teacher;
 	var teacher_insert_data= async function(){
-		var data_insert_teacher= new teacher({
+		data_insert_teacher= new teacher({
 			_id: req.body.id,
 			name: req.body.name,
 			f_name: req.body.fname,
@@ -88,11 +93,11 @@ app.post("/add-teacher", (req, res)=>{
 			salary: req.body.salary,
 			qualification: req.body.qualification
 		});
-		var data_teacher=await data_insert_teacher.save();
-		res.render("img-teacher", {id: data_teacher._id})
+		data_teacher=await data_insert_teacher.save();
+		
 	};
 	teacher_insert_data();
-
+	res.render("img-teacher", {id: data_insert_teacher._id})
 });
 
 
