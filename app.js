@@ -176,7 +176,7 @@ app.post("/img/student/id/:id",upload1, (req, res)=>{
 			)
 	};
 	add();
-	res.render("index");
+	res.redirect("/");
 });
 
 
@@ -206,7 +206,7 @@ app.post("/img/teacher/id/:id",upload2, (req, res)=>{
 			)
 	};
 	add();
-	res.redirect("/find/teacher");
+	res.redirect("/");
 })
 
 app.get("/search", (req, res)=>{
